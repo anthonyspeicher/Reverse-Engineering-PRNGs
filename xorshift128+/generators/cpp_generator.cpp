@@ -4,6 +4,8 @@
  * @brief: C++ implementation of the xorshift128+ algorithm referenced at https://en.wikipedia.org/wiki/Xorshift
 **/
 
+#ifndef XORSHIFT128_BASE_FUNCTIONS
+#define XORSHIFT128_BASE_FUNCTIONS
 #include <cstdint>
 
 struct xorshift128p_state {
@@ -31,3 +33,5 @@ uint64_t xorshift128p(xorshift128p_state &state)
   /// output
   return t + s;
 }
+
+#endif
